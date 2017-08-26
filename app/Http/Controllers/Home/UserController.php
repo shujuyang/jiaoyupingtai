@@ -12,4 +12,29 @@ class UserController extends Controller
     {
         return view ('home/user/login');
     }
+
+    // forgetPwdOne() 方法
+    public function forgetPwdOne()
+    {
+        return view ('home/user/forgetPasswordOne');
+    }
+
+    // forgetPwdTwo() 方法
+    public function forgetPwdTwo()
+    {
+        return view ('home/user/forgetPasswordTwo');
+    }
+
+    // forgetPwdThree() 方法
+    public function forgetPwdThree()
+    {
+        return view ('home/user/forgetPasswordThree');
+    }
+    
+
+    // forgetPwdOK() 方法
+    public function forgetPwdOK()
+    {
+        return view ('home/user/forgetPasswordOK');
+    }
 }

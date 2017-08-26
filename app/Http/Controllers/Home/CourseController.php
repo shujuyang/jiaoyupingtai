@@ -29,4 +29,28 @@ class CourseController extends Controller
     {
         return view ('home/course/courseScore');
     }
+
+    // video() 方法，播放视频
+    public function video ()
+    {
+        return view ('home/course/courseVideo');
+    }
+
+    // answer() 方法，测试答案
+    public function answer ()
+    {
+        return view ('home/course/courseAnswer');
+    }
+
+    // exam() 方法，测试、考试
+    public function exam ()
+    {
+        return view ('home/course/courseExam');
+    }
+
+    // document() 方法，文档，知识点的方法
+    public function document()
+    {
+        return view ('home/course/courseDocument');
+    }
 }

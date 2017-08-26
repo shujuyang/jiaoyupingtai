@@ -22,8 +22,9 @@ Route::get('home/index','Home\IndexController@index');
  * */
 Route::group(['prefix' => 'home','namespace' => 'Home'],function(){
 
+    // 首页控制器
     Route::get('index/index','IndexController@index');
-    Route::get('user/login','UserController@login');
+    // 问题反馈控制器
     Route::get('problem/feedback','ProblemController@feedback');
 
     // 课程控制器
@@ -31,7 +32,10 @@ Route::group(['prefix' => 'home','namespace' => 'Home'],function(){
     Route::get('course/article','CourseController@article');
     Route::get('course/week','CourseController@courseWeek');
     Route::get('course/score','CourseController@score');
-
+    Route::get('course/video','CourseController@video');
+    Route::get('course/answer','CourseController@answer');
+    Route::get('course/exam','CourseController@exam');
+    Route::get('course/document','CourseController@document');
 
     // 教师控制器
     Route::get('teacher/register','TeacherController@register');
@@ -42,6 +46,13 @@ Route::group(['prefix' => 'home','namespace' => 'Home'],function(){
     Route::get('student/master','StudentController@master');
     Route::get('student/allCourse','StudentController@allCourse');
     Route::get('student/setting','StudentController@setting');
+
+    // 用户控制器
+    Route::get('user/login','UserController@login');
+    Route::get('user/forgetOne','UserController@forgetPwdOne');
+    Route::get('user/forgetTwo','UserController@forgetPwdTwo');
+    Route::get('user/forgetThree','UserController@forgetPwdThree');
+    Route::get('user/forgetOK','UserController@forgetPwdOK');
 
 
 });
