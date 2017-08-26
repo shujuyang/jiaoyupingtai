@@ -13,9 +13,5 @@ class IndexController extends Controller
         return view('home/index/index');
     }
 
-    // 展示前台 列表页的方法
-    public function learingList()
-    {
-        return view('home/index/learingList');
-    }
+
 }
