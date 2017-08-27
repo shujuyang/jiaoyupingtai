@@ -22,7 +22,7 @@
                 <a href="javascript:;" class="logo">
                 <img src="/home/img/asset-logoico.png" alt="logo" width="200">
             </a>
-                <div class="gologin">我有账号 去<a href="javascript:;">登录</a></div>
+                <div class="gologin">我有账号 去<a href="{{url('/home/user/login')}}">登录</a></div>
             </div>
         </div>
         <div class="register-body">
@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">手机号码</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="phone" placeholder="请输入手机号码">
+                                <input type="text" class="form-control" name="phone" id="phone" onfocus placeholder="请输入手机号码">
                                 <span class="verif-span"></span>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">验证码</label>
                             <div class="col-sm-9 verif">
-                                <input type="text" class="form-control" name="verif" placeholder="请输入验证码">
+                                <input type="text" class="form-control" name="verif" id="verif" placeholder="请输入验证码">
                                 <button class="btn btn-default send" type="button">发送验证码</button>
                                 <span class="verif-span"></span>
                             </div>
@@ -57,7 +57,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">密码</label>
                             <div class="col-sm-9">
-                                <input type="password" class="form-control" name="password" placeholder="请输入密码">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="请输入密码">
                                 <span class="verif-span"></span>
                             </div>
                         </div>
@@ -66,20 +66,21 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">确认密码</label>
                             <div class="col-sm-9">
-                                <input type="password" class="form-control" name="confirm" placeholder="确认密码">
+                                <input type="password" class="form-control" name="confirm" id="confirm" placeholder="确认密码">
                                 <span class="verif-span"></span>
                             </div>
+                        </div>
                     </li>
                     <li class="mag-left">
                         <div class="checkbox">
                             <label>
-                        <input type="checkbox">同意协议并注册
+                        <input type="checkbox" id="agreeRegister">同意协议并注册
                         <a href="javascript:;">《学成网注册协议》</a>
                     </label>
                         </div>
                     </li>
                     <li class="mag-left">
-                        <button name="register" type="button" class="btn btn-primary">完成注册</button>
+                        <input name="register" type="submit" class="btn btn-primary" value="完成注册"/>
                     </li>
                 </ul>
             </form>
@@ -128,5 +129,62 @@
         <!-- 页面 css js -->
         <script type="text/javascript" src="/home/plugins/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="/home/plugins/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="/home/js/page-learing-student-register.js"></script>
+        <script src="/home/js/page-learning-student-register.js"></script>
+    <script>
+
+        $('#regStudentForm').submit(function() {
+            // 获取表单数据
+            var phone = $('#phone');
+            var phoneReg = /^1(3|5|7|8)\d{9}$/;
+            var password = $('#password');
+            console.log(password)
+            var pwdReg = /^(\w|\,|\.){6,18}$/;
+            var confirm = $('#confirm');
+            var verif = $('#verif');
+            var verifReg = /^\w{4}$/;
+
+
+            if(phone.val() == ''){
+                phone.siblings('.verif-span').show().text('手机号不能为空');
+                return false;
+            }else if(!phoneReg.test(phone.val())){
+                phone.siblings('.verif-span').show().text('请按正确的格式填写手机号');
+                return false;
+            }else {
+                phone.siblings('.verif-span').hide();
+            }
+
+            var passwordVal = password.val();
+            if(passwordVal == ''){
+                password.siblings('.verif-span').show().text('密码不能为空');
+                return false;
+            }else if(passwordVal.length<6 || passwordVal.length>18 ){
+                password.siblings('.verif-span').show().text('密码的长度必须为6-18位');
+                return false;
+            }else if(!pwdReg.test(passwordVal)){
+                password.siblings('.verif-span').show().text('密码只包含数字、字母或"_"、","、"."');
+                return false;
+            }else {
+                password.siblings('.verif-span').hide();
+            }
+
+            if(confirm.val() == ''){
+                confirm.siblings('.verif-span').show().text('确认密码不能为空');
+                return false;
+            }else if (confirm.val() != password.val()){
+                confirm.siblings('.verif-span').show().text('两次输入的密码不相同');
+                return false;
+            }else {
+                confirm.siblings('.verif-span').hide();
+            }
+            if(verif.val() == ''){
+                verif.siblings('.verif-span').show().text('手机验证码不能为空');
+                return false;
+            }
+        })
+
+
+
+
+    </script>
 </body>

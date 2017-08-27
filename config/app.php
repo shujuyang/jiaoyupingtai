@@ -19,10 +19,13 @@ return [
     | Application Environment
     |--------------------------------------------------------------------------
     |
-    | This value determines the "environment" your application is currently
+    | This value determines(决定了) the "environment" your application is currently(流畅的)
     | running in. This may determine how you prefer to configure various
     | services your application utilizes. Set this in your ".env" file.
     |
+    | 这个值决定你的应用程序当前的“环境”
+    | 这可能会决定你喜欢配置各种各样的
+    | 服务应用程序利用。 将其设置在您的“.env”文件中。
     */
 
     'env' => env('APP_ENV', 'production'),
@@ -38,7 +41,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------

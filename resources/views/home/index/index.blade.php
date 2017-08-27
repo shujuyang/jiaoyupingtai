@@ -821,5 +821,5 @@
         $(this).find('span').addClass('hide')
     })
 </script>
-<script src="/home/js/page-learing-index.js"></script>
+<script src="/home/js/page-learning-index.js"></script>
 </body>

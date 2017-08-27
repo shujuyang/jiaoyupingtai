@@ -118,5 +118,5 @@
     <!-- 页面 css js -->
     <script type="text/javascript" src="/home/plugins/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="/home/plugins/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="/home/js/page-learing-forget-password.js"></script>
+    <script src="/home/js/page-learning-forget-password.js"></script>
 </body>

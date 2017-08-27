@@ -197,7 +197,7 @@
     <script type="text/javascript" src="/home/plugins/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/home/plugins/bootstrap-Validator/bootstrapValidator.js"></script>
     <script src="/home/plugins/bootstrap-Validator/zh_CN.js"></script>
-    <script src="/home/js/page-learing-teacher-register.js"></script>
+    <script src="/home/js/page-learning-teacher-register.js"></script>
     <script>
         $(document).ready(function() {
             /**

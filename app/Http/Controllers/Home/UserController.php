@@ -30,7 +30,7 @@ class UserController extends Controller
     {
         return view ('home/user/forgetPasswordThree');
     }
-    
+
 
     // forgetPwdOK() 方法
     public function forgetPwdOK()
