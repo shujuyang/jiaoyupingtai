@@ -16,6 +16,25 @@
     "jquery": "^3.1.1",
     "laravel-mix": "^1.0",
     "lodash": "^4.17.4",
-    "vue": "^2.1.10"
-  }
+    "vue": "^2.1.10",
+    "webpack": "^3.5.5"
+  },
+  "name": "quanzhan2",
+  "description": "<p align=\"center\"><img src=\"https://laravel.com/assets/img/components/logo-laravel.svg\"></p>",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shujuyang/quanzhan2.git"
+  },
+  "author": "yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shujuyang/quanzhan2/issues"
+  },
+  "homepage": "https://github.com/shujuyang/quanzhan2#readme"
 }
