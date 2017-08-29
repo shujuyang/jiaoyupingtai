@@ -1,17 +1,11 @@
 var mypath = require('path')
 var htmlPlugin = require('html-webpack-plugin')
 module.exports = {
-    entry: './vue/app.js',
+    entry: './resources/assets/js/app.js',
     output: {
-        path: mypath.join(__dirname,'./dist'),
+        path: mypath.join(__dirname,'./public/dist'),
         filename: 'hebing.js'
     },
-    plugins: [
-        new htmlPlugin({
-            template: './index.html' , // 指定复制哪个html
-            filename: 'index.html' // 指定复制后的html叫什么名字
-        })
-    ],
     module: {
         // 不知是可以打包 css，还可以打包less
         // 也可以处理sass，或者 *.vue ，图片，或者字体

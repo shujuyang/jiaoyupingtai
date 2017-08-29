@@ -1,22 +1,13 @@
+// 引入组件和引入js 或 css 的方式相似
+import Btn from './components/Btn.vue'
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+// vue 指的是 node_modules 中的文件夹名
+import Vue from 'vue'
 
-require('./bootstrap');
-
-window.Vue = require('vue');
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-Vue.component('example', require('./components/Example.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
+var vm = new Vue({
+    el: '#app',
+    // 实例的末班的几种方式之一
+    render: function(createElement) {
+        return createElement(Btn)
+    }
+})
