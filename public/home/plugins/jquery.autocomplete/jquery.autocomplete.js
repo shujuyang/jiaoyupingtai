@@ -1349,9 +1349,9 @@ var safeActiveElement = $.ui.safeActiveElement = function( document ) {
 //>>description: Creates nestable menus.
 //>>docs: http://api.jqueryui.com/menu/
 //>>demos: http://jqueryui.com/menu/
-//>>css.structure: ../../themes/base/core.css
-//>>css.structure: ../../themes/base/menu.css
-//>>css.theme: ../../themes/base/theme.css
+//>>H-ui.structure: ../../themes/base/core.H-ui
+//>>H-ui.structure: ../../themes/base/menu.H-ui
+//>>H-ui.theme: ../../themes/base/theme.H-ui
 
 
 
@@ -2004,9 +2004,9 @@ var widgetsMenu = $.widget( "ui.menu", {
 //>>description: Lists suggested words as the user is typing.
 //>>docs: http://api.jqueryui.com/autocomplete/
 //>>demos: http://jqueryui.com/autocomplete/
-//>>css.structure: ../../themes/base/core.css
-//>>css.structure: ../../themes/base/autocomplete.css
-//>>css.theme: ../../themes/base/theme.css
+//>>H-ui.structure: ../../themes/base/core.H-ui
+//>>H-ui.structure: ../../themes/base/autocomplete.H-ui
+//>>H-ui.theme: ../../themes/base/theme.H-ui
 
 
 

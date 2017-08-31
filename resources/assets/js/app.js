@@ -1,13 +1,19 @@
-// 引入组件和引入js 或 css 的方式相似
-import Btn from './components/Btn.vue'
-
-// vue 指的是 node_modules 中的文件夹名
+// 引入vue
 import Vue from 'vue'
+import App from './App.vue'
+import router from './router.js'
+
+// 引用样式
+// css
+// js
 
 var vm = new Vue({
     el: '#app',
-    // 实例的末班的几种方式之一
+    // 实例的模板的几种方式之一
+    router,
     render: function(createElement) {
-        return createElement(Btn)
+        // return createElement (组件对象)
+        // App组件中的模板最终会替换 index.blade.php 中的 #app 这个原色
+        return createElement(App)
     }
 })

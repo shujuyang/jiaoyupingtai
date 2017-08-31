@@ -3,11 +3,11 @@ var htmlPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: './resources/assets/js/app.js',
     output: {
-        path: mypath.join(__dirname,'./public/dist'),
+        path: mypath.join(__dirname,'/public/admin/dist'),
         filename: 'hebing.js'
     },
     module: {
-        // 不知是可以打包 css，还可以打包less
+        // 不知是可以打包 H-ui，还可以打包less
         // 也可以处理sass，或者 *.vue ，图片，或者字体
         rules: [
             {

@@ -5,7 +5,7 @@
  */
 
 /*
- * Use fullcalendar.css for basic styling.
+ * Use fullcalendar.H-ui for basic styling.
  * For event drag & drop, requires jQuery UI draggable.
  * For event resizing, requires jQuery UI resizable.
  */
@@ -1855,7 +1855,7 @@ function disableTextSelection(element) {
 function enableTextSelection(element) {
 	element
 		.attr('unselectable', 'off')
-		.css('MozUserSelect', '')
+		.H-ui('MozUserSelect', '')
 		.unbind('selectstart.ui');
 }
 */

@@ -133,7 +133,7 @@
         </div>
     </div>
     <!-- 页面底部 -->
-    <!-- 页面 css js -->
+    <!-- 页面 H-ui js -->
     <script type="text/javascript" src="/home/plugins/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="/home/plugins/bootstrap/dist/js/bootstrap.js"></script>
     <script>
@@ -192,7 +192,7 @@
 
 
         $(function() {
-            //$('body').css('height',$('.course-cont').height()+'px')
+            //$('body').H-ui('height',$('.course-cont').height()+'px')
             var vidHit = $('html').height() - 120;
             var vidCenHit = (vidHit - $('.video-play').height()) / 2;
             $('.video').css('height', vidHit)

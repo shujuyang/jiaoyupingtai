@@ -55,7 +55,13 @@ Route::group(['prefix' => 'home','namespace' => 'Home'],function(){
     Route::get('user/forgetTwo','UserController@forgetPwdTwo');
     Route::get('user/forgetThree','UserController@forgetPwdThree');
     Route::get('user/forgetOK','UserController@forgetPwdOK');
+});
 
-
+/*
+ * 后台页面的路由群组
+ * 指定 路由前缀 和 命名空间
+ * */
+Route::group(['prefix' => 'admin','namespace' => 'Admin'],function() {
+    Route::get('index/index','IndexController@index');
 });
 
