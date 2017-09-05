@@ -2,6 +2,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router.js'
+import 'ueditor/ueditor.all.min.js'
+import 'ueditor/ueditor.config.js'
+import 'ueditor/zh-cn.js'
 
 // 引用样式
 // css

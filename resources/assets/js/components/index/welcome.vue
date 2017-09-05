@@ -165,8 +165,29 @@
 
 </template>
 
-<script type="text/javascript">
+<script>
+    import axios from 'axios'
+    export default {
+        data () {
+            return {
 
+            }
+        },
+        methods: {
+
+        },
+        created () {
+            axios({
+                url: '/admin/index/getServerMessage',
+                type: 'get',
+                params: {
+
+                }
+            }).then( res => {
+                console.log(res['data'])
+            })
+        }
+    }
 </script>
 
 <style type="text/css">

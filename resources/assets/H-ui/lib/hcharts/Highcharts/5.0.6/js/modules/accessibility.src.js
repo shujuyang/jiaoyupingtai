@@ -73,7 +73,7 @@
                 waterfall: ' A waterfall chart is a column chart where each column contributes towards a total end value. '
             },
             commonKeys = ['name', 'id', 'category', 'x', 'value', 'y'],
-            specialKeys = ['z', 'open', 'high', 'q3', 'median', 'q1', 'low', 'close']; // Tell user about all properties if points have one of these defined
+            specialKeys = ['z', 'open', 'high', 'q3', 'median', 'q1', 'low', 'close']; // Tell manager about all properties if points have one of these defined
 
         // Default a11y options
         H.setOptions({
@@ -850,7 +850,7 @@
                 })
             ];
 
-            // Init nav module index. We start at the first module, and as the user navigates through the chart the index will increase to use different handler modules.
+            // Init nav module index. We start at the first module, and as the manager navigates through the chart the index will increase to use different handler modules.
             chart.keyboardNavigationModuleIndex = 0;
 
             // Make chart reachable by tab
@@ -907,7 +907,7 @@
             if (chart.getCSV) {
                 tableShortcutAnchor.innerHTML = 'View as data table.';
                 tableShortcutAnchor.href = '#' + tableId;
-                tableShortcutAnchor.setAttribute('tabindex', '-1'); // Make this unreachable by user tabbing
+                tableShortcutAnchor.setAttribute('tabindex', '-1'); // Make this unreachable by manager tabbing
                 tableShortcutAnchor.onclick = a11yOptions.onTableAnchorClick || function() {
                     chart.viewData();
                     doc.getElementById(tableId).focus();

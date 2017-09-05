@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/admin/H-ui/lib/Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" type="text/css" href="/admin/H-ui/static/h-ui.admin/skin/default/skin.css" id="skin" />
     <link rel="stylesheet" type="text/css" href="/admin/H-ui/static/h-ui.admin/css/style.css" />
+    <link href="/admin/H-ui/static/h-ui.admin/css/H-ui.login.css" rel="stylesheet" type="text/css" />
     <title>Title</title>
 </head>
 <body>
@@ -21,4 +22,5 @@
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/admin/H-ui/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
 <script type="text/javascript" src="/admin/dist/hebing.js"></script>
+
 </html>

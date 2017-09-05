@@ -12,4 +12,8 @@ class IndexController extends Controller
     {
         return view('admin/index/index');
     }
+
+    public function getServerMessage () {
+        return $_SERVER;
+    }
 }

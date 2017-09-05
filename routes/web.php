@@ -50,11 +50,11 @@ Route::group(['prefix' => 'home','namespace' => 'Home'],function(){
     Route::get('student/setting','StudentController@setting');
 
     // 用户控制器
-    Route::get('user/login','UserController@login');
-    Route::get('user/forgetOne','UserController@forgetPwdOne');
-    Route::get('user/forgetTwo','UserController@forgetPwdTwo');
-    Route::get('user/forgetThree','UserController@forgetPwdThree');
-    Route::get('user/forgetOK','UserController@forgetPwdOK');
+    Route::get('manager/login','UserController@login');
+    Route::get('manager/forgetOne','UserController@forgetPwdOne');
+    Route::get('manager/forgetTwo','UserController@forgetPwdTwo');
+    Route::get('manager/forgetThree','UserController@forgetPwdThree');
+    Route::get('manager/forgetOK','UserController@forgetPwdOK');
 });
 
 /*
@@ -63,5 +63,10 @@ Route::group(['prefix' => 'home','namespace' => 'Home'],function(){
  * */
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function() {
     Route::get('index/index','IndexController@index');
+    Route::get('index/getServerMessage','IndexController@getServerMessage');
+
+    Route::get('manager/login','ManagerController@login');
+    Route::get('manager/showlist','ManagerController@showlist');
+    Route::post('manager/add','ManagerController@add');
 });
 

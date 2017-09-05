@@ -22,7 +22,7 @@
                 <a href="javascript:;" class="logo">
                 <img src="/home/img/asset-logoico.png" alt="logo" width="200">
             </a>
-                <div class="gologin">我有账号 去<a href="{{url('/home/user/login')}}">登录</a></div>
+                <div class="gologin">我有账号 去<a href="{{url('manager')}}">登录</a></div>
             </div>
         </div>
         <div class="register-body">

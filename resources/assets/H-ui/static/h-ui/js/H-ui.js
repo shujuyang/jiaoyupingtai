@@ -408,7 +408,7 @@ function stopDefault(e) {
 
 		var jqxhr;
 
-		// options.iframe allows user to force iframe mode
+		// options.iframe allows manager to force iframe mode
 		// 06-NOV-09: now defaulting to iframe mode if file input is detected
 		if (options.iframe !== false && (options.iframe || shouldUseFrame)) {
 			// hack to fix Safari hang (thanks to Tim Molendijk for this)
@@ -506,7 +506,7 @@ function stopDefault(e) {
 			s.data = null;
 			var beforeSend = s.beforeSend;
 			s.beforeSend = function(xhr, o) {
-				//Send FormData() provided by user
+				//Send FormData() provided by manager
 				if (options.formData) {
 					o.data = options.formData;
 				} else {
@@ -873,7 +873,7 @@ function stopDefault(e) {
 					var dt = (s.dataType || '').toLowerCase();
 					var scr = /(json|script|text)/.test(dt);
 					if (scr || s.textarea) {
-						// see if user embedded response in textarea
+						// see if manager embedded response in textarea
 						var ta = doc.getElementsByTagName('textarea')[0];
 						if (ta) {
 							xhr.responseText = ta.value;
@@ -2311,7 +2311,7 @@ function stopDefault(e) {
 			},
 
 			/**
-		* Check if the user is scrolling instead of tapping.
+		* Check if the manager is scrolling instead of tapping.
 		*
 		* @param  {event} event
 		*/
@@ -2332,7 +2332,7 @@ function stopDefault(e) {
 					return;
 				}
 
-				// If the user isn't scrolling
+				// If the manager isn't scrolling
 				if (!this.touchHasMoved) {
 
 					// If the event type is touch
